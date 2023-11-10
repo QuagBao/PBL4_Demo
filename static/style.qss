@@ -1,0 +1,34 @@
+/*Set style for buttons in QMessageBox dialog*/
+QDialogButtonBox > QPushButton{
+    background-color: #CBCBCD
+}
+QDialogButtonBox > QPushButton[text = "&Yes"]:hover{
+    background-color: #00BBCC
+}
+
+QDialogButtonBox > QPushButton[text = "&No"]:hover{
+    background-color: #FF7733
+}
+
+QDialogButtonBox > QPushButton {
+    border: none;
+    border-radius: 10px;
+    width: 60px;
+    height: 25px;
+}
+
+QDialogButtonBox > QPushButton:pressed{
+    padding-left: 10px;
+}
+
+QMessageBox {
+    background-color: #FFEDE1; /* Màu nền của hộp thoại */
+    border-radius: 10px; /* Đường viền bo tròn của hộp thoại */
+    border: 2px solid #FFEDE1;
+}
+
+QMessageBox QLabel {
+    border-radius: 10px 10px 10px 10px; /* Đường viền bo tròn của thanh tiêu đề */
+    color: #0E1C36;
+}
+

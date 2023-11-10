@@ -1,0 +1,41 @@
+<RCC>
+  <qresource prefix="Img">
+    <file>icons/add-user-16.ico</file>
+    <file>icons/angles-left-solid.svg</file>
+    <file>icons/angles-right-solid.svg</file>
+    <file>icons/arrow-59-16.ico</file>
+    <file>icons/arrow-80-16.ico</file>
+    <file>icons/arrow-96-16.ico</file>
+    <file>icons/arrow-right-to-bracket-solid.svg</file>
+    <file>icons/back_2099238.png</file>
+    <file>icons/bars-solid.svg</file>
+    <file>icons/check-mark-3-16.ico</file>
+    <file>icons/check-solid.svg</file>
+    <file>icons/close_10263254.png</file>
+    <file>icons/close-circle-svgrepo-com (2).svg</file>
+    <file>icons/close-circle-svgrepo-com.svg</file>
+    <file>icons/facebook_logo_icon_147291.ico</file>
+    <file>icons/facebook_logo_icon_257007.ico</file>
+    <file>icons/home.svg</file>
+    <file>icons/key-6-16.ico</file>
+    <file>icons/laptop-medical-solid.svg</file>
+    <file>icons/line_logo_icon_147270.ico</file>
+    <file>icons/line_logo_icon_188432.ico</file>
+    <file>icons/list.svg</file>
+    <file>icons/log_3596092.png</file>
+    <file>icons/magnifying-glass-solid.svg</file>
+    <file>icons/menu-burger.svg</file>
+    <file>icons/plus.svg</file>
+    <file>icons/plus-solid.svg</file>
+    <file>icons/question-mark-6-16.ico</file>
+    <file>icons/question-solid.svg</file>
+    <file>icons/reply-solid.svg</file>
+    <file>icons/search.svg</file>
+    <file>icons/settings.svg</file>
+    <file>icons/user-add.svg</file>
+    <file>icons/user-large-solid.svg</file>
+    <file>icons/x-mark-4-16.ico</file>
+    <file>icons/youtube_logo_icon_257017.ico</file>
+    <file>img/hand-holding-cloud-system-with-data-protection.jpg</file>
+  </qresource>
+</RCC>
