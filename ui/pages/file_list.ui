@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>586</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form {
+	background-color: #A0B9D0;
+}
+
+</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>15</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>15</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTreeWidget" name="files">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <family>Constantia</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTreeWidget {
+    spacing: 10px; /* Cách nhau 5px giữa các item trong 1 hàng */
+}
+
+#files{
+	background-color: #3E7CB1;
+	border:1px solid #A0B9D0;
+	border-radius: 25px solid #DBE4EE;
+	padding:25px;
+	color: #DBE4EE;
+}
+
+QHeaderView::section
+{	color: #DBE4EE;
+	background-color: #3E7CB1;
+	border:1px;
+	border-top-right:5px;
+	padding-left:10px;
+	padding-bottom:20px		
+}
+
+QTreeWidget::item{
+	padding-bottom:5px;		
+	spacing: 10px;
+}
+
+QTreeWidget::item::hover{
+	background-color: #81A4CD;
+	border:1px solid #81A4CD ;
+	border-radius: 5px
+}
+
+QTreeWidget::item::pressed{
+	font-weight: bold;
+	padding-left:5px;
+	background-color: #81A4CD;
+	border:1px solid #81A4CD ;
+	border-radius: 5px
+}
+
+QTreeWidget::item::selected{
+	font-weight: bold;
+	background-color: #81A4CD;
+	border:1px solid #81A4CD ;
+	border-radius: 5px
+}
+
+QTreeWidget::item::selected::active{
+	background-color: #054A91;
+	border:1px solid #81A4CD ;
+	border-radius: 5px;
+	font-weight:bold;
+}
+
+QScrollArea{
+	border:none;
+	padding-right:15px;
+}
+
+QScrollBar:vertical {
+    border:none;
+    background: #3E7CB1;
+    width: 8px;
+	border-radius:5px;
+	padding-top:5px;
+	padding-left:2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #A0B9D0;
+    min-height: 20px;
+	border-radius:3px;
+	padding-left: 15px
+}
+
+QScrollBar::add-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical {
+	background: #3E7CB1;
+}
+
+QScrollBar::sub-page:vertical {
+	background: #3E7CB1;
+}
+
+/*Horizontal scrollbar*/
+QScrollBar:horizontal {
+    border: none;
+    background: #3E7CB1;
+    height: 8px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #A0B9D0;
+    min-width: 20px;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:horizontal {
+    background: #3E7CB1;
+}
+
+QScrollBar::sub-page:horizontal {
+    background: #3E7CB1;
+}</string>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>16</width>
+       <height>16</height>
+      </size>
+     </property>
+     <column>
+      <property name="text">
+       <string>File list</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="background">
+       <color>
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </property>
+     </column>
+     <item>
+      <property name="text">
+       <string>Fade</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="icon">
+       <iconset resource="../../static/res.qrc">
+        <normaloff>:/newPrefix/icons/icons/feather/folder.svg</normaloff>:/newPrefix/icons/icons/feather/folder.svg</iconset>
+      </property>
+      <item>
+       <property name="text">
+        <string>Sova</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>Sage</string>
+        </property>
+       </item>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Omen</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../static/res.qrc">
+        <normaloff>:/newPrefix/icons/icons/feather/folder.svg</normaloff>:/newPrefix/icons/icons/feather/folder.svg</iconset>
+      </property>
+      <item>
+       <property name="text">
+        <string>Cypher</string>
+       </property>
+      </item>
+     </item>
+     <item>
+      <property name="text">
+       <string>Breach</string>
+      </property>
+      <property name="icon">
+       <iconset resource="../../static/res.qrc">
+        <normaloff>:/newPrefix/icons/icons/feather/folder.svg</normaloff>:/newPrefix/icons/icons/feather/folder.svg</iconset>
+      </property>
+      <item>
+       <property name="text">
+        <string>Yoru</string>
+       </property>
+      </item>
+     </item>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../static/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

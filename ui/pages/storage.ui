@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>637</width>
+    <height>338</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #A0B9D0;
+color: #3d5673;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>15</number>
+   </property>
+   <property name="leftMargin">
+    <number>25</number>
+   </property>
+   <property name="topMargin">
+    <number>25</number>
+   </property>
+   <property name="rightMargin">
+    <number>25</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="label_93">
+     <property name="font">
+      <font>
+       <family>Constantia</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Disk Partition</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tableWidget_2">
+     <property name="font">
+      <font>
+       <family>Times New Roman</family>
+       <pointsize>-1</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QTableWidget {
+	border-radius: 15px;
+	border: 1px solid #3d5673;
+	background-color: #A0B9D0;
+	padding:10px;
+	padding-left:20px;
+	gridline-color: #3d5673;
+	color:#3B3561;
+	font-family: 'Times New Roman', serif;
+	font-size: 15px;
+}
+QHeaderView {
+	background-color: #A0B9D0;
+	border-radius: 10px;
+	color:#3B3561;
+	font-family: 'Times New Roman', serif;
+	font-size: 1s5px;
+}
+
+QHeaderView::section {
+	background-color: #A0B9D0;
+	border: none;
+	border-radius: 25px;
+	font-family: 'Times New Roman', serif;
+	font-size: 15px;
+}
+
+QTableWidget QTableCornerButton::section {
+    background-color: #A0B9D0;
+    border: none;
+	border-radius: 20px;
+}
+QScrollArea{
+	border:none;
+}
+
+QScrollBar:vertical {
+    border:none;
+    background: #A0B9D0;
+    width: 8px;
+	border-radius:5px;
+	padding-top:5px;
+	padding-left:2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #3E8989;
+    min-height: 20px;
+	border-radius:3px;
+	padding-left: 15px
+}
+
+QScrollBar::add-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical {
+	background: #A0B9D0;
+}
+
+QScrollBar::sub-page:vertical {
+	background: #A0B9D0;
+}
+
+/*Horizontal scrollbar*/
+QScrollBar:horizontal {
+    border: none;
+    background: #A0B9D0;
+    height: 8px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #3E8989;
+    min-width: 20px;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:horizontal {
+    background: #A0B9D0;
+}
+
+QScrollBar::sub-page:horizontal {
+    background: #A0B9D0;
+}
+
+QTableView::item{
+	padding-left: 20px;
+	textAlignment: center
+}
+QTableView::item:selected{
+	selection-background-color: #3B3561;
+	selection-color: white;
+}
+</string>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="verticalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="horizontalScrollMode">
+      <enum>QAbstractItemView::ScrollPerPixel</enum>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::DashLine</enum>
+     </property>
+     <attribute name="horizontalHeaderMinimumSectionSize">
+      <number>100</number>
+     </attribute>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>150</number>
+     </attribute>
+     <attribute name="verticalHeaderMinimumSectionSize">
+      <number>50</number>
+     </attribute>
+     <attribute name="verticalHeaderDefaultSectionSize">
+      <number>50</number>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>Device</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Total Storage</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Used Storage</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Free Storage</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Percent</string>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

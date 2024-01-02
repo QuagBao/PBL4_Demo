@@ -6,15 +6,36 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>984</width>
-    <height>614</height>
+    <width>837</width>
+    <height>598</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #C9D8E3;</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>16</width>
+    <height>16</height>
+   </size>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QGridLayout" name="gridLayout_3">
+   <property name="styleSheet">
+    <string notr="true">background-color: #C9D8E3;</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <property name="spacing">
+     <number>0</number>
+    </property>
     <property name="leftMargin">
      <number>0</number>
     </property>
@@ -27,326 +48,31 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <property name="spacing">
-     <number>0</number>
-    </property>
-    <item row="0" column="0">
+    <item>
      <widget class="QSplitter" name="splitter">
+      <property name="styleSheet">
+       <string notr="true">background-color: #C9D8E3;</string>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
       <property name="handleWidth">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="menu_widget" native="true">
-       <property name="styleSheet">
-        <string notr="true">background-color: #ADADAE;
-color: #252627;
-border: none
-</string>
+      <widget class="QFrame" name="frame">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
-       <layout class="QGridLayout" name="gridLayout">
-        <property name="leftMargin">
-         <number>4</number>
-        </property>
-        <property name="topMargin">
-         <number>4</number>
-        </property>
-        <property name="rightMargin">
-         <number>4</number>
-        </property>
-        <property name="bottomMargin">
-         <number>15</number>
-        </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
         <property name="spacing">
          <number>0</number>
         </property>
-        <item row="0" column="1">
-         <widget class="QToolBox" name="toolBox">
-          <property name="minimumSize">
-           <size>
-            <width>150</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">#toolBox{
-	color:#5D707F;
-}
-#toolBox::tab{
-	padding-left:5px;
-	text-align:left;
-	border-radius:5px;
-}
-#toolBox::tab::selected{
-	background-color:#199F9F;
-	font-weight:bold;
-}
-#toolBox QPushButton{
-	padding: 5px 0px 5px 20px;
-	text-align:left;
-	border-radius:5px;
-}
-#toolBox QPushButton:hover{
-	background-color:#9CF6F6;
-}
-#toolBox QPushButton:checked{
-	background-color:#15E0E0;
-}
-</string>
-          </property>
-          <property name="currentIndex">
-           <number>0</number>
-          </property>
-          <widget class="QWidget" name="general_page">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>154</width>
-             <height>502</height>
-            </rect>
-           </property>
-           <attribute name="icon">
-            <iconset resource="../static/resource.qrc">
-             <normaloff>:/Img/icons/home.svg</normaloff>:/Img/icons/home.svg</iconset>
-           </attribute>
-           <attribute name="label">
-            <string>General</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <property name="spacing">
-             <number>10</number>
-            </property>
-            <property name="leftMargin">
-             <number>5</number>
-            </property>
-            <property name="topMargin">
-             <number>5</number>
-            </property>
-            <property name="rightMargin">
-             <number>5</number>
-            </property>
-            <property name="bottomMargin">
-             <number>5</number>
-            </property>
-            <item>
-             <widget class="QPushButton" name="home_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Home</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-              <property name="checked">
-               <bool>false</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="dashboard_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Dashboard</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>414</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="car_page">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>154</width>
-             <height>502</height>
-            </rect>
-           </property>
-           <attribute name="icon">
-            <iconset resource="../static/resource.qrc">
-             <normaloff>:/Img/icons/settings.svg</normaloff>:/Img/icons/settings.svg</iconset>
-           </attribute>
-           <attribute name="label">
-            <string>Cars</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_2">
-            <property name="spacing">
-             <number>10</number>
-            </property>
-            <property name="leftMargin">
-             <number>5</number>
-            </property>
-            <property name="topMargin">
-             <number>5</number>
-            </property>
-            <property name="rightMargin">
-             <number>5</number>
-            </property>
-            <property name="bottomMargin">
-             <number>5</number>
-            </property>
-            <item>
-             <widget class="QPushButton" name="toyota_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="text">
-               <string>Toyota</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="lexus_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Lexus</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="mazda_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Mazda</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_2">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>378</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="social_page">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>154</width>
-             <height>502</height>
-            </rect>
-           </property>
-           <attribute name="icon">
-            <iconset resource="../static/resource.qrc">
-             <normaloff>:/Img/icons/user-add.svg</normaloff>:/Img/icons/user-add.svg</iconset>
-           </attribute>
-           <attribute name="label">
-            <string>Social</string>
-           </attribute>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-            <property name="spacing">
-             <number>10</number>
-            </property>
-            <property name="leftMargin">
-             <number>5</number>
-            </property>
-            <property name="topMargin">
-             <number>5</number>
-            </property>
-            <property name="rightMargin">
-             <number>5</number>
-            </property>
-            <property name="bottomMargin">
-             <number>5</number>
-            </property>
-            <item>
-             <widget class="QPushButton" name="youtube_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Youtube</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="tumblr_button">
-              <property name="focusPolicy">
-               <enum>Qt::NoFocus</enum>
-              </property>
-              <property name="text">
-               <string>Tumbr</string>
-              </property>
-              <property name="checkable">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_3">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>414</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </widget>
-         </widget>
-        </item>
-       </layout>
-      </widget>
-      <widget class="QWidget" name="main_widget" native="true">
-       <layout class="QGridLayout" name="gridLayout_2">
         <property name="leftMargin">
          <number>0</number>
         </property>
@@ -359,148 +85,74 @@ border: none
         <property name="bottomMargin">
          <number>0</number>
         </property>
-        <property name="spacing">
-         <number>0</number>
-        </property>
-        <item row="0" column="0">
-         <widget class="QWidget" name="search_widget" native="true">
-          <property name="styleSheet">
-           <string notr="true">#search_widget{
-	background-color:#8797B2;
-}
-#search_widget QPushButton{
-	border-radius: 5px;
-	padding: 5px 20px 5px 20px;
-	text-align:center;
-}
-#search_widge QPushButton:pressed{
-	padding-left: 10px;
-}
-
-/*Set style for long and creat device button in function widget */
-#ExitButton:hover, #ExitButton:pressed, #hidden_button:hover, #hidden_button:pressed{
-	background-color: #9CF6F6;
-	font-weight:bold;
-}
-</string>
+        <item alignment="Qt::AlignTop">
+         <widget class="QFrame" name="header_frame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
-            <widget class="QPushButton" name="hidden_button">
-             <property name="minimumSize">
-              <size>
-               <width>30</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>30</width>
-               <height>30</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">#QPushButton{
-	border-radius: 10%
-}
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="icon">
-              <iconset resource="../static/resource.qrc">
-               <normaloff>:/Img/icons/list.svg</normaloff>
-               <normalon>:/Img/icons/menu-burger.svg</normalon>:/Img/icons/list.svg</iconset>
-             </property>
-             <property name="checkable">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="horizontalSpacer">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>133</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QFrame" name="search_frame">
-             <property name="styleSheet">
-              <string notr="true">#search_frame{
-	border:1px solid #aa7e6f;
-	border-radius:15px;
-	background-color:#fff;
-}
-#search_frame QPushButton{
-	padding:5px 5px;
-	border-radius:15px;
-}
-#search_frame QPushButton:pressed{
-	padding-left:10px;
-}
-#search_frame QLineEdit{
-	border:none;
-}</string>
-             </property>
+            <widget class="QFrame" name="header_left_frame">
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
              </property>
              <property name="frameShadow">
               <enum>QFrame::Raised</enum>
              </property>
-             <layout class="QHBoxLayout" name="horizontalLayout">
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
               <property name="spacing">
-               <number>6</number>
+               <number>0</number>
               </property>
               <property name="leftMargin">
-               <number>15</number>
+               <number>0</number>
               </property>
               <property name="topMargin">
                <number>0</number>
               </property>
               <property name="rightMargin">
-               <number>5</number>
+               <number>0</number>
               </property>
               <property name="bottomMargin">
                <number>0</number>
               </property>
-              <item>
-               <widget class="QLineEdit" name="lineEdit">
-                <property name="minimumSize">
-                 <size>
-                  <width>300</width>
-                  <height>0</height>
-                 </size>
-                </property>
+              <item alignment="Qt::AlignLeft">
+               <widget class="QPushButton" name="menu_button">
                 <property name="font">
                  <font>
+                  <family>Constantia</family>
                   <pointsize>10</pointsize>
                  </font>
                 </property>
-                <property name="placeholderText">
-                 <string>Search something</string>
-                </property>
-                <property name="clearButtonEnabled">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="search_button">
                 <property name="text">
-                 <string/>
+                 <string>Menu</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="../static/resource.qrc">
-                  <normaloff>:/Img/icons/search.svg</normaloff>:/Img/icons/search.svg</iconset>
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/feather/align-left.svg</normaloff>:/newPrefix/icons/icons/feather/align-left.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
                 </property>
                </widget>
               </item>
@@ -508,115 +160,1766 @@ border: none
             </widget>
            </item>
            <item>
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+            <widget class="QFrame" name="header_center_frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>132</width>
-               <height>20</height>
-              </size>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
-            </spacer>
-           </item>
-           <item>
-            <widget class="QPushButton" name="ExitButton">
-             <property name="minimumSize">
-              <size>
-               <width>82</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">#pushButton{
-	border-radius: 5px;
-	padding: 5px 0px 5px 20px;
-	text-align:center;
-}
-#pushButton::selected{
-	background-color:#728797;
-	font-weight:bold;
-}</string>
-             </property>
-             <property name="text">
-              <string>Exit</string>
-             </property>
-             <property name="icon">
-              <iconset resource="../static/resource.qrc">
-               <normaloff>:/Img/icons/log_3596092.png</normaloff>:/Img/icons/log_3596092.png</iconset>
-             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap resource="../static/res.qrc">:/newPrefix/icons/icons/feather/airplay.svg</pixmap>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>12</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>RASBERRY PI APPLICATION</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item>
-            <widget class="QLabel" name="user_label">
-             <property name="minimumSize">
-              <size>
-               <width>20</width>
-               <height>20</height>
-              </size>
+           <item alignment="Qt::AlignRight">
+            <widget class="QFrame" name="heade_right_frame">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
              </property>
-             <property name="maximumSize">
-              <size>
-               <width>20</width>
-               <height>20</height>
-              </size>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
              </property>
-             <property name="styleSheet">
-              <string notr="true">#user_label{
-	background-color:#fff;
-	border:1px solid #F2F4F4;
-	padding:5px 5px;
-	border-radius:10%;
-}
-</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="pixmap">
-              <pixmap resource="../static/resource.qrc">:/Img/icons/settings.svg</pixmap>
-             </property>
-             <property name="scaledContents">
-              <bool>true</bool>
-             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="minimize_window_button">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/cil-minus.png</normaloff>:/newPrefix/icons/icons/cil-minus.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="restore_window_button">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/cil-window-restore.png</normaloff>:/newPrefix/icons/icons/cil-window-restore.png</iconset>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="close_window_button">
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/feather/x.svg</normaloff>:/newPrefix/icons/icons/feather/x.svg</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
           </layout>
          </widget>
         </item>
-        <item row="1" column="0">
-         <widget class="QTabWidget" name="tabWidget">
+        <item>
+         <widget class="QFrame" name="main_body_frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="font">
            <font>
-            <pointsize>10</pointsize>
+            <family>Constantia</family>
            </font>
           </property>
-          <property name="focusPolicy">
-           <enum>Qt::NoFocus</enum>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="styleSheet">
-           <string notr="true">#tabWidget{
-	background-color:#fff;
-}
-QTabBar::close-button{
-	margin-left:3px;
-	image: url(:/Img/icons/x-mark-4-16.ico);
-}
-QTabBar::close-button:hover{
-	image: url(:/Img/icons/close_10263254.png);
-}
-
-
-
-</string>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
-          <property name="currentIndex">
-           <number>-1</number>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="left_menu_cont_frame">
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>278</width>
+               <height>583</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="menu_frame">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_5">
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="ListButtonTab">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_2">
+                    <item row="0" column="0">
+                     <widget class="QToolBox" name="toolBox">
+                      <property name="minimumSize">
+                       <size>
+                        <width>251</width>
+                        <height>271</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Constantia</family>
+                        <pointsize>10</pointsize>
+                       </font>
+                      </property>
+                      <property name="currentIndex">
+                       <number>1</number>
+                      </property>
+                      <widget class="QWidget" name="rasp_info_btn">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>191</width>
+                         <height>170</height>
+                        </rect>
+                       </property>
+                       <attribute name="icon">
+                        <iconset resource="../static/res.qrc">
+                         <normaloff>:/newPrefix/icons/icons/feather/hard-drive.svg</normaloff>:/newPrefix/icons/icons/feather/hard-drive.svg</iconset>
+                       </attribute>
+                       <attribute name="label">
+                        <string>Rasp Information</string>
+                       </attribute>
+                       <layout class="QHBoxLayout" name="horizontalLayout_12">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                         <widget class="QFrame" name="frame_5">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_4">
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="horizontalSpacing">
+                            <number>15</number>
+                           </property>
+                           <item row="2" column="0">
+                            <widget class="QPushButton" name="pushButton_4">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/inbox.svg</normaloff>:/newPrefix/icons/icons/feather/inbox.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="pushButton_2">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/cpu.svg</normaloff>:/newPrefix/icons/icons/feather/cpu.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="0">
+                            <widget class="QPushButton" name="pushButton_3">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/monitor.svg</normaloff>:/newPrefix/icons/icons/feather/monitor.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QLabel" name="label_7">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>CPU</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QLabel" name="label_8">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>System Information</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="1">
+                            <widget class="QLabel" name="label_9">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>OS Information</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="act_btn">
+                       <property name="geometry">
+                        <rect>
+                         <x>0</x>
+                         <y>0</y>
+                         <width>251</width>
+                         <height>211</height>
+                        </rect>
+                       </property>
+                       <attribute name="icon">
+                        <iconset resource="../static/res.qrc">
+                         <normaloff>:/newPrefix/icons/icons/feather/activity.svg</normaloff>:/newPrefix/icons/icons/feather/activity.svg</iconset>
+                       </attribute>
+                       <attribute name="label">
+                        <string>Activities</string>
+                       </attribute>
+                       <layout class="QHBoxLayout" name="horizontalLayout_11">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                         <widget class="QFrame" name="Activities_Frame">
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                          <layout class="QGridLayout" name="gridLayout_3">
+                           <property name="leftMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="horizontalSpacing">
+                            <number>15</number>
+                           </property>
+                           <item row="1" column="0">
+                            <widget class="QPushButton" name="file_list_btn">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/file.svg</normaloff>:/newPrefix/icons/icons/feather/file.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="0">
+                            <widget class="QPushButton" name="terminal_btn">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/terminal.svg</normaloff>:/newPrefix/icons/icons/feather/terminal.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="2" column="1">
+                            <widget class="QLabel" name="Terminal">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Terminal</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="0">
+                            <widget class="QPushButton" name="process_list_btn">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/cil-list.png</normaloff>:/newPrefix/icons/icons/cil-list.png</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="0" column="1">
+                            <widget class="QLabel" name="Process_List">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>Process List</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="1" column="1">
+                            <widget class="QLabel" name="File_List">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>File List</string>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="0">
+                            <widget class="QPushButton" name="sftp_btn">
+                             <property name="text">
+                              <string/>
+                             </property>
+                             <property name="icon">
+                              <iconset resource="../static/res.qrc">
+                               <normaloff>:/newPrefix/icons/icons/feather/share-2.svg</normaloff>:/newPrefix/icons/icons/feather/share-2.svg</iconset>
+                             </property>
+                             <property name="iconSize">
+                              <size>
+                               <width>32</width>
+                               <height>32</height>
+                              </size>
+                             </property>
+                            </widget>
+                           </item>
+                           <item row="3" column="1">
+                            <widget class="QLabel" name="SFTP">
+                             <property name="font">
+                              <font>
+                               <family>Constantia</family>
+                               <pointsize>10</pointsize>
+                              </font>
+                             </property>
+                             <property name="text">
+                              <string>SFTP</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QFrame" name="ListButton">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_10">
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <item alignment="Qt::AlignLeft|Qt::AlignTop">
+                     <widget class="QFrame" name="frame_4">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout">
+                       <property name="horizontalSpacing">
+                        <number>15</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>9</number>
+                       </property>
+                       <item row="1" column="0" alignment="Qt::AlignLeft">
+                        <widget class="QPushButton" name="network_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../static/res.qrc">
+                           <normaloff>:/newPrefix/icons/icons/feather/wifi.svg</normaloff>:/newPrefix/icons/icons/feather/wifi.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>32</width>
+                           <height>32</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLabel" name="label_4">
+                         <property name="font">
+                          <font>
+                           <family>Constantia</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Storage</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" alignment="Qt::AlignLeft">
+                        <widget class="QPushButton" name="storage_btn">
+                         <property name="text">
+                          <string/>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="../static/res.qrc">
+                           <normaloff>:/newPrefix/icons/icons/feather/disc.svg</normaloff>:/newPrefix/icons/icons/feather/disc.svg</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>32</width>
+                           <height>32</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QLabel" name="label_6">
+                         <property name="font">
+                          <font>
+                           <family>Constantia</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Network</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="main_body_contents">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QStackedWidget" name="stackedWidget">
+                <property name="currentIndex">
+                 <number>2</number>
+                </property>
+                <widget class="QWidget" name="cpu_and_memory">
+                 <layout class="QVBoxLayout" name="verticalLayout_4">
+                  <property name="spacing">
+                   <number>25</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>20</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>20</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="cpu_info_frame">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_15">
+                     <property name="leftMargin">
+                      <number>10</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_92">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>CPU Temperature</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="txt_cpu_per">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="txt_cpu_count">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLabel" name="txt_cpu_main_core">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_96">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>CPU Count</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_97">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>CPU Main Core</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_98">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>CPU Percentage</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="txt_cpu_temp">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="ram_info_frame">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_14">
+                     <property name="leftMargin">
+                      <number>10</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_82">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Used RAM</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="txt_available_ram">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_84">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Total RAM</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="label_85">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Available RAM</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="0">
+                      <widget class="QLabel" name="label_86">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>RAM Usage</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_87">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Free RAM</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="txt_total_ram">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="txt_used_ram">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="5" column="1">
+                      <widget class="QLabel" name="txt_ram_usage">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLabel" name="txt_free_ram">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="os_info"/>
+                <widget class="QWidget" name="process_list">
+                 <layout class="QVBoxLayout" name="verticalLayout_6">
+                  <item>
+                   <widget class="QFrame" name="frame_8">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_13">
+                     <item>
+                      <widget class="QLabel" name="label_88">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Process List</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item alignment="Qt::AlignRight">
+                      <widget class="QFrame" name="frame_11">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_14">
+                        <item>
+                         <widget class="QLineEdit" name="lineEdit">
+                          <property name="font">
+                           <font>
+                            <family>Constantia</family>
+                            <pointsize>10</pointsize>
+                           </font>
+                          </property>
+                          <property name="placeholderText">
+                           <string>Search Process</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="pushButton_5">
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset resource="../static/res.qrc">
+                            <normaloff>:/newPrefix/icons/icons/feather/search.svg</normaloff>:/newPrefix/icons/icons/feather/search.svg</iconset>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>20</width>
+                            <height>20</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_9">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_7">
+                     <item>
+                      <widget class="QTableWidget" name="tableWidget">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <column>
+                        <property name="text">
+                         <string>Process ID</string>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Constantia</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Process Name</string>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Constantia</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Process Status</string>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Constantia</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>CPU_Percent</string>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Constantia</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Memory Info</string>
+                        </property>
+                        <property name="font">
+                         <font>
+                          <family>Constantia</family>
+                          <pointsize>10</pointsize>
+                         </font>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item alignment="Qt::AlignBottom">
+                   <widget class="QFrame" name="frame_10">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QHBoxLayout" name="horizontalLayout_15">
+                     <item>
+                      <widget class="QPushButton" name="pushButton_6">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Suspend</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_7">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Resume</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="pushButton_8">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Kill</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="system_info">
+                 <layout class="QVBoxLayout" name="verticalLayout_5">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame_7">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_16">
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="label_90">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Version</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_89">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Platform</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="2">
+                      <widget class="QLabel" name="label_100">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Machine</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QLabel" name="label_99">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Processor</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="3">
+                      <widget class="QLabel" name="txt_processor">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="2">
+                      <widget class="QLabel" name="label_101">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>System Time</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="3">
+                      <widget class="QLabel" name="txt_machine">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLabel" name="txt_sysdate">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="txt_platform">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="3">
+                      <widget class="QLabel" name="txt_systime">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLabel" name="txt_version">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="label_91">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>System Date</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="txt_hedieuhanh">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>10</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>N/A</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_83">
+                       <property name="font">
+                        <font>
+                         <family>Constantia</family>
+                         <pointsize>13</pointsize>
+                         <bold>true</bold>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>System Information</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="file_list"/>
+                <widget class="QWidget" name="terminal"/>
+                <widget class="QWidget" name="sftp"/>
+                <widget class="QWidget" name="storage">
+                 <layout class="QVBoxLayout" name="verticalLayout_8">
+                  <property name="spacing">
+                   <number>15</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="label_93">
+                    <property name="font">
+                     <font>
+                      <family>Constantia</family>
+                      <pointsize>12</pointsize>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="text">
+                     <string>Disk Partition</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QTableWidget" name="tableWidget_2">
+                    <property name="font">
+                     <font>
+                      <family>Constantia</family>
+                      <pointsize>10</pointsize>
+                     </font>
+                    </property>
+                    <column>
+                     <property name="text">
+                      <string>Device</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Constantia</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Total Storage</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Constantia</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>New Column</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Constantia</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Free Storage</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Constantia</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                    <column>
+                     <property name="text">
+                      <string>Percent</string>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <family>Constantia</family>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QWidget" name="network">
+                 <layout class="QVBoxLayout" name="verticalLayout_9">
+                  <item>
+                   <widget class="QScrollArea" name="scrollArea">
+                    <property name="widgetResizable">
+                     <bool>true</bool>
+                    </property>
+                    <widget class="QWidget" name="scrollAreaWidgetContents">
+                     <property name="geometry">
+                      <rect>
+                       <x>0</x>
+                       <y>0</y>
+                       <width>109</width>
+                       <height>109</height>
+                      </rect>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_10">
+                      <item>
+                       <widget class="QFrame" name="frame_12">
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_11">
+                         <item>
+                          <widget class="QTableWidget" name="tableWidget_3">
+                           <property name="font">
+                            <font>
+                             <family>Constantia</family>
+                             <pointsize>10</pointsize>
+                            </font>
+                           </property>
+                           <column>
+                            <property name="text">
+                             <string>FD</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>FAMILY</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>TYPE</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>LADDR</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>RADDR</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>STATUS</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                           <column>
+                            <property name="text">
+                             <string>PID</string>
+                            </property>
+                            <property name="font">
+                             <font>
+                              <family>Constantia</family>
+                              <pointsize>10</pointsize>
+                             </font>
+                            </property>
+                           </column>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignBottom">
+         <widget class="QFrame" name="footer_frame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="tabsClosable">
-           <bool>true</bool>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frame_2">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_3">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item alignment="Qt::AlignRight">
+               <widget class="QPushButton" name="pushButton">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Disconnect</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/feather/cast.svg</normaloff>:/newPrefix/icons/icons/feather/cast.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>32</width>
+                  <height>32</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item alignment="Qt::AlignBottom">
+            <widget class="QFrame" name="size_grip">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>10</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -627,22 +1930,23 @@ QTabBar::close-button:hover{
   </widget>
  </widget>
  <resources>
+  <include location="../static/res.qrc"/>
   <include location="../static/resource.qrc"/>
  </resources>
  <connections>
   <connection>
-   <sender>hidden_button</sender>
+   <sender>menu_button</sender>
    <signal>toggled(bool)</signal>
-   <receiver>menu_widget</receiver>
+   <receiver>left_menu_cont_frame</receiver>
    <slot>setHidden(bool)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>216</x>
-     <y>38</y>
+     <x>59</x>
+     <y>22</y>
     </hint>
     <hint type="destinationlabel">
-     <x>177</x>
-     <y>3</y>
+     <x>124</x>
+     <y>73</y>
     </hint>
    </hints>
   </connection>

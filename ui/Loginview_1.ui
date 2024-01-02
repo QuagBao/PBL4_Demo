@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1353</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/*Set style for app title widget*/
+#titleWidget{
+	background-image: url(:/Img/img/final1.jpg);
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+#titleWidget QLabel{
+	color: #A7BED3;
+	font-family: &quot;Stencil&quot;
+}
+
+#titleLabel1{
+	font-size: 35px;
+	font-weight: bold;
+}
+
+/*Set style for function widget*/
+#funcWidget {
+	background-image: url(:/Img/img/123.jpg);
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top: 2px soild #343434;
+	border-right: 2px soild #343434;
+	border-bottom: 2px soild #343434;
+}
+
+/*Set style for login label and register label in function widget*/
+#LoginLabel, #RegisLabel{
+	color: #A7BED3;
+	font-size: 30px;
+}
+
+/*Set style for all the QLabel in function widget*/
+#funcWidget QLabel{
+	color: #A7BED3;
+	font-family: &quot;Stencil&quot;;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/*Set style for all the buttons in function widget*/
+#funcWidget QLineEdit{
+	border: 1px soild #E4E6C3;
+	padding: 5px 10px;
+	background-color: #F7F7F2 ;
+	font-size:15px;
+	border-radius: 10px
+}
+
+#funcWidget QLineEdit:focus{
+	border-color: #F7F7F2
+}
+
+/*Set style for all the buttons in function widget*/
+#funcWidget QPushButton{
+	border-radius: 5px;
+	background-color:#CBCBCD
+}
+
+#funcWidget QPushButton:pressed{
+	padding-left: 10px;
+}
+
+/*Set style for long and creat device button in function widget */
+#LoginButton:hover, #LoginButton:pressed, #AddButton:hover, #AddButton:pressed{
+	background-color: #00A8B8;
+}
+#CreateButton:hover, #CreateButton:pressed{
+	background-color: #00CC9C;
+}
+#ExitButton:hover, #ExitButton:pressed{
+	background-color: #FF7733;
+}
+#BackButton:hover, #BackButton:pressed{
+	background-color: #00B4F5;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="2" rowspan="2">
+    <widget class="QStackedWidget" name="funcWidget">
+     <property name="minimumSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>500</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page_2">
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <spacer name="verticalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>57</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="NameLabel1">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Stencil</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Address IP</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="NameDevice1">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item>
+          <widget class="QLabel" name="NameLabel1_4">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Stencil</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Password</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="password_txt">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item>
+          <widget class="QLabel" name="NameLabel1_3">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Stencil</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Username</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="username_txt">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="7" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="ExitButton">
+           <property name="minimumSize">
+            <size>
+             <width>102</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Exit</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../DemoPyQt_Backup/static/resource.qrc">
+             <normaloff>:/Img/icons/close_10263254.png</normaloff>:/Img/icons/close_10263254.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="LoginButton">
+           <property name="minimumSize">
+            <size>
+             <width>102</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Connect</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../DemoPyQt_Backup/static/resource.qrc">
+             <normaloff>:/Img/icons/arrow-right-to-bracket-solid.svg</normaloff>:/Img/icons/arrow-right-to-bracket-solid.svg</iconset>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="8" column="1">
+        <spacer name="verticalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>56</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0" rowspan="2">
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>72</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="3" column="1">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="IPLabel1">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>29</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Stencil</family>
+             <pointsize>-1</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>Port</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="IPDevice1">
+           <property name="minimumSize">
+            <size>
+             <width>317</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Normal</enum>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="LoginLabel">
+         <property name="minimumSize">
+          <size>
+           <width>319</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">#LoginLabel{
+	font-size: 30px;
+	color: #1A3551
+}</string>
+         </property>
+         <property name="text">
+          <string>Connect</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" rowspan="2">
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>71</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1" rowspan="2">
+    <widget class="QWidget" name="titleWidget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>700</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>700</width>
+       <height>500</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SetNoConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>213</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>25</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="titleLabel1">
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>RASPBERRY APPLICATION</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>213</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>58</width>
+       <height>688</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="0" column="3" rowspan="2">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>58</width>
+       <height>688</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../static/res.qrc"/>
+  <include location="../../DemoPyQt_Backup/static/resource.qrc"/>
+ </resources>
+ <connections/>
+</ui>

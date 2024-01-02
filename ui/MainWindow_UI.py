@@ -14,25 +14,29 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(984, 614)
+        MainWindow.resize(1082, 669)
+        MainWindow.setStyleSheet("background-color: #C9D8E3;")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setStyleSheet("background-color: #C9D8E3;")
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.centralwidget)
         self.gridLayout_3.setContentsMargins(0, 0, 0, 0)
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.splitter = QtWidgets.QSplitter(self.centralwidget)
+        self.splitter.setStyleSheet("background-color: #C9D8E3;")
+        self.splitter.setLineWidth(0)
         self.splitter.setOrientation(QtCore.Qt.Horizontal)
         self.splitter.setHandleWidth(0)
         self.splitter.setObjectName("splitter")
         self.menu_widget = QtWidgets.QWidget(self.splitter)
-        self.menu_widget.setStyleSheet("background-color: #ADADAE;\n"
-"color: #252627;\n"
-"border: none\n"
+        self.menu_widget.setStyleSheet("background-color: #4B7C9B;\n"
+"color: #0E243D;\n"
+"\n"
 "")
         self.menu_widget.setObjectName("menu_widget")
         self.gridLayout = QtWidgets.QGridLayout(self.menu_widget)
-        self.gridLayout.setContentsMargins(4, 4, 4, 15)
+        self.gridLayout.setContentsMargins(5, 5, 5, 20)
         self.gridLayout.setSpacing(0)
         self.gridLayout.setObjectName("gridLayout")
         self.toolBox = QtWidgets.QToolBox(self.menu_widget)
@@ -41,32 +45,38 @@ class Ui_MainWindow(object):
         font.setPointSize(10)
         self.toolBox.setFont(font)
         self.toolBox.setStyleSheet("#toolBox{\n"
-"    color:#5D707F;\n"
+"    color:#8DAEC6;\n"
+"    border-radius: 5%;\n"
 "}\n"
 "#toolBox::tab{\n"
 "    padding-left:5px;\n"
 "    text-align:left;\n"
 "    border-radius:5px;\n"
 "}\n"
+"#toolBox::tab::hover{\n"
+"    background-color:#82A7C2;\n"
+"}\n"
 "#toolBox::tab::selected{\n"
-"    background-color:#199F9F;\n"
+"    background-color:#8DAEC6;\n"
 "    font-weight:bold;\n"
 "}\n"
 "#toolBox QPushButton{\n"
 "    padding: 5px 0px 5px 20px;\n"
 "    text-align:left;\n"
 "    border-radius:5px;\n"
+"    color: #11253E;\n"
+"    border: 1px;\n"
 "}\n"
 "#toolBox QPushButton:hover{\n"
-"    background-color:#9CF6F6;\n"
+"    background-color:#6991B5;\n"
 "}\n"
 "#toolBox QPushButton:checked{\n"
-"    background-color:#15E0E0;\n"
+"    background-color:#78A0BC;\n"
 "}\n"
 "")
         self.toolBox.setObjectName("toolBox")
         self.general_page = QtWidgets.QWidget()
-        self.general_page.setGeometry(QtCore.QRect(0, 0, 154, 502))
+        self.general_page.setGeometry(QtCore.QRect(0, 0, 161, 551))
         self.general_page.setObjectName("general_page")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.general_page)
         self.verticalLayout.setContentsMargins(5, 5, 5, 5)
@@ -89,7 +99,7 @@ class Ui_MainWindow(object):
         icon.addPixmap(QtGui.QPixmap(":/Img/icons/home.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.general_page, icon, "")
         self.car_page = QtWidgets.QWidget()
-        self.car_page.setGeometry(QtCore.QRect(0, 0, 154, 502))
+        self.car_page.setGeometry(QtCore.QRect(0, 0, 161, 551))
         self.car_page.setObjectName("car_page")
         self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.car_page)
         self.verticalLayout_2.setContentsMargins(5, 5, 5, 5)
@@ -117,7 +127,7 @@ class Ui_MainWindow(object):
         icon1.addPixmap(QtGui.QPixmap(":/Img/icons/settings.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.toolBox.addItem(self.car_page, icon1, "")
         self.social_page = QtWidgets.QWidget()
-        self.social_page.setGeometry(QtCore.QRect(0, 0, 154, 502))
+        self.social_page.setGeometry(QtCore.QRect(0, 0, 83, 82))
         self.social_page.setObjectName("social_page")
         self.verticalLayout_3 = QtWidgets.QVBoxLayout(self.social_page)
         self.verticalLayout_3.setContentsMargins(5, 5, 5, 5)
@@ -140,6 +150,7 @@ class Ui_MainWindow(object):
         self.toolBox.addItem(self.social_page, icon2, "")
         self.gridLayout.addWidget(self.toolBox, 0, 1, 1, 1)
         self.main_widget = QtWidgets.QWidget(self.splitter)
+        self.main_widget.setStyleSheet("background-color: #A0B9D0;")
         self.main_widget.setObjectName("main_widget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.main_widget)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -147,7 +158,7 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.search_widget = QtWidgets.QWidget(self.main_widget)
         self.search_widget.setStyleSheet("#search_widget{\n"
-"    background-color:#8797B2;\n"
+"    background-color:#4B7C9B;\n"
 "}\n"
 "#search_widget QPushButton{\n"
 "    border-radius: 5px;\n"
@@ -160,19 +171,29 @@ class Ui_MainWindow(object):
 "\n"
 "/*Set style for long and creat device button in function widget */\n"
 "#ExitButton:hover, #ExitButton:pressed, #hidden_button:hover, #hidden_button:pressed{\n"
-"    background-color: #9CF6F6;\n"
+"    background-color: #8DAEC6;\n"
 "    font-weight:bold;\n"
+"}\n"
+"\n"
+"#AddressConnect{\n"
+"    color: #1A3551;\n"
+"    border-radius: 8px;\n"
+"    padding-left: 10px;\n"
 "}\n"
 "")
         self.search_widget.setObjectName("search_widget")
-        self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.search_widget)
-        self.horizontalLayout_2.setObjectName("horizontalLayout_2")
+        self.horizontalLayout = QtWidgets.QHBoxLayout(self.search_widget)
+        self.horizontalLayout.setContentsMargins(9, -1, 9, 9)
+        self.horizontalLayout.setSpacing(9)
+        self.horizontalLayout.setObjectName("horizontalLayout")
         self.hidden_button = QtWidgets.QPushButton(self.search_widget)
         self.hidden_button.setMinimumSize(QtCore.QSize(30, 30))
         self.hidden_button.setMaximumSize(QtCore.QSize(30, 30))
         self.hidden_button.setStyleSheet("#QPushButton{\n"
+"    background-color: #4B7C9B;\n"
 "    border-radius: 10%\n"
 "}\n"
+"\n"
 "")
         self.hidden_button.setText("")
         icon3 = QtGui.QIcon()
@@ -181,66 +202,25 @@ class Ui_MainWindow(object):
         self.hidden_button.setIcon(icon3)
         self.hidden_button.setCheckable(True)
         self.hidden_button.setObjectName("hidden_button")
-        self.horizontalLayout_2.addWidget(self.hidden_button)
+        self.horizontalLayout.addWidget(self.hidden_button)
         spacerItem3 = QtWidgets.QSpacerItem(133, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem3)
-        self.search_frame = QtWidgets.QFrame(self.search_widget)
-        self.search_frame.setStyleSheet("#search_frame{\n"
-"    border:1px solid #aa7e6f;\n"
-"    border-radius:15px;\n"
-"    background-color:#fff;\n"
-"}\n"
-"#search_frame QPushButton{\n"
-"    padding:5px 5px;\n"
-"    border-radius:15px;\n"
-"}\n"
-"#search_frame QPushButton:pressed{\n"
-"    padding-left:10px;\n"
-"}\n"
-"#search_frame QLineEdit{\n"
-"    border:none;\n"
-"}")
-        self.search_frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.search_frame.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.search_frame.setObjectName("search_frame")
-        self.horizontalLayout = QtWidgets.QHBoxLayout(self.search_frame)
-        self.horizontalLayout.setContentsMargins(15, 0, 5, 0)
-        self.horizontalLayout.setSpacing(6)
-        self.horizontalLayout.setObjectName("horizontalLayout")
-        self.lineEdit = QtWidgets.QLineEdit(self.search_frame)
-        self.lineEdit.setMinimumSize(QtCore.QSize(300, 0))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.lineEdit.setFont(font)
-        self.lineEdit.setClearButtonEnabled(True)
-        self.lineEdit.setObjectName("lineEdit")
-        self.horizontalLayout.addWidget(self.lineEdit)
-        self.search_button = QtWidgets.QPushButton(self.search_frame)
-        self.search_button.setText("")
-        icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap(":/Img/icons/search.svg"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.search_button.setIcon(icon4)
-        self.search_button.setObjectName("search_button")
-        self.horizontalLayout.addWidget(self.search_button)
-        self.horizontalLayout_2.addWidget(self.search_frame)
+        self.horizontalLayout.addItem(spacerItem3)
+        self.AddressConnect = QtWidgets.QLineEdit(self.search_widget)
+        self.AddressConnect.setEnabled(False)
+        self.AddressConnect.setMinimumSize(QtCore.QSize(331, 22))
+        self.AddressConnect.setStyleSheet("background-color: #fff")
+        self.AddressConnect.setObjectName("AddressConnect")
+        self.horizontalLayout.addWidget(self.AddressConnect)
         spacerItem4 = QtWidgets.QSpacerItem(132, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_2.addItem(spacerItem4)
+        self.horizontalLayout.addItem(spacerItem4)
         self.ExitButton = QtWidgets.QPushButton(self.search_widget)
-        self.ExitButton.setMinimumSize(QtCore.QSize(82, 0))
-        self.ExitButton.setStyleSheet("#pushButton{\n"
-"    border-radius: 5px;\n"
-"    padding: 5px 0px 5px 20px;\n"
-"    text-align:center;\n"
-"}\n"
-"#pushButton::selected{\n"
-"    background-color:#728797;\n"
-"    font-weight:bold;\n"
-"}")
-        icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap(":/Img/icons/log_3596092.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.ExitButton.setIcon(icon5)
+        self.ExitButton.setMinimumSize(QtCore.QSize(141, 26))
+        self.ExitButton.setStyleSheet("")
+        icon4 = QtGui.QIcon()
+        icon4.addPixmap(QtGui.QPixmap(":/Img/icons/log_3596092.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.ExitButton.setIcon(icon4)
         self.ExitButton.setObjectName("ExitButton")
-        self.horizontalLayout_2.addWidget(self.ExitButton)
+        self.horizontalLayout.addWidget(self.ExitButton)
         self.user_label = QtWidgets.QLabel(self.search_widget)
         self.user_label.setMinimumSize(QtCore.QSize(20, 20))
         self.user_label.setMaximumSize(QtCore.QSize(20, 20))
@@ -255,7 +235,7 @@ class Ui_MainWindow(object):
         self.user_label.setPixmap(QtGui.QPixmap(":/Img/icons/settings.svg"))
         self.user_label.setScaledContents(True)
         self.user_label.setObjectName("user_label")
-        self.horizontalLayout_2.addWidget(self.user_label)
+        self.horizontalLayout.addWidget(self.user_label)
         self.gridLayout_2.addWidget(self.search_widget, 0, 0, 1, 1)
         self.tabWidget = QtWidgets.QTabWidget(self.main_widget)
         font = QtGui.QFont()
@@ -263,8 +243,10 @@ class Ui_MainWindow(object):
         self.tabWidget.setFont(font)
         self.tabWidget.setFocusPolicy(QtCore.Qt.NoFocus)
         self.tabWidget.setStyleSheet("#tabWidget{\n"
-"    background-color:#fff;\n"
+"    background-color: #C9D8E3;\n"
+"    border-radius: 5px;\n"
 "}\n"
+"\n"
 "QTabBar::close-button{\n"
 "    margin-left:3px;\n"
 "    image: url(:/Img/icons/x-mark-4-16.ico);\n"
@@ -272,6 +254,14 @@ class Ui_MainWindow(object):
 "QTabBar::close-button:hover{\n"
 "    image: url(:/Img/icons/close_10263254.png);\n"
 "}\n"
+"QTabBar::tab{\n"
+"    background-color:  #C9D8E3;\n"
+"    min-width: 100px;\n"
+"    max-width: 175px;\n"
+"    height: 25px;\n"
+"    border-radius:3px;\n"
+"}\n"
+"\n"
 "\n"
 "\n"
 "\n"
@@ -291,26 +281,16 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.home_button.setText(_translate("MainWindow", "Home"))
+        self.home_button.setText(_translate("MainWindow", "Rasp"))
         self.dashboard_button.setText(_translate("MainWindow", "Dashboard"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.general_page), _translate("MainWindow", "General"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.general_page), _translate("MainWindow", "Information"))
         self.toyota_button.setText(_translate("MainWindow", "Toyota"))
         self.lexus_button.setText(_translate("MainWindow", "Lexus"))
         self.mazda_button.setText(_translate("MainWindow", "Mazda"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.car_page), _translate("MainWindow", "Cars"))
+        self.toolBox.setItemText(self.toolBox.indexOf(self.car_page), _translate("MainWindow", "Folder"))
         self.youtube_button.setText(_translate("MainWindow", "Youtube"))
         self.tumblr_button.setText(_translate("MainWindow", "Tumbr"))
-        self.toolBox.setItemText(self.toolBox.indexOf(self.social_page), _translate("MainWindow", "Social"))
-        self.lineEdit.setPlaceholderText(_translate("MainWindow", "Search something"))
-        self.ExitButton.setText(_translate("MainWindow", "Exit"))
-from static import resource_rc
-
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     MainWindow = QtWidgets.QMainWindow()
-#     ui = Ui_MainWindow()
-#     ui.setupUi(MainWindow)
-#     MainWindow.show()
-#     sys.exit(app.exec_())
+        self.toolBox.setItemText(self.toolBox.indexOf(self.social_page), _translate("MainWindow", "SendFile"))
+        self.AddressConnect.setText(_translate("MainWindow", "IP:                                              Type of connect:"))
+        self.ExitButton.setText(_translate("MainWindow", "Disconnect"))
+from static import res_rc

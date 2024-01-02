@@ -14,16 +14,16 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(1322, 700)
+        Form.resize(1353, 700)
         Form.setStyleSheet("/*Set style for app title widget*/\n"
 "#titleWidget{\n"
-"    border-image: url(:/Img/img/hand-holding-cloud-system-with-data-protection.jpg);\n"
+"    background-image: url(:/Img/img/final1.jpg);\n"
 "    border-bottom-left-radius: 20px;\n"
 "    border-top-left-radius: 20px;\n"
 "}\n"
 "\n"
 "#titleWidget QLabel{\n"
-"    color: #379392;\n"
+"    color: #A7BED3;\n"
 "    font-family: \"Stencil\"\n"
 "}\n"
 "\n"
@@ -34,22 +34,26 @@ class Ui_Form(object):
 "\n"
 "/*Set style for function widget*/\n"
 "#funcWidget {\n"
-"    background-color: #ADADAE ;\n"
+"    background-image: url(:/Img/img/123.jpg);\n"
 "    border-top-right-radius: 20px;\n"
 "    border-bottom-right-radius: 20px;\n"
 "    border-top: 2px soild #343434;\n"
 "    border-right: 2px soild #343434;\n"
 "    border-bottom: 2px soild #343434;\n"
 "}\n"
-"/*Set style for all the QLabel in function widget*/\n"
-"#funcWidget QLabel{\n"
-"    color:     #39413E\n"
-"}\n"
 "\n"
 "/*Set style for login label and register label in function widget*/\n"
 "#LoginLabel, #RegisLabel{\n"
-"    font-family: \"Viner Hand ITC\";\n"
+"    color: #A7BED3;\n"
 "    font-size: 30px;\n"
+"}\n"
+"\n"
+"/*Set style for all the QLabel in function widget*/\n"
+"#funcWidget QLabel{\n"
+"    color: #A7BED3;\n"
+"    font-family: \"Stencil\";\n"
+"    font-size: 15px;\n"
+"    font-weight: bold;\n"
 "}\n"
 "\n"
 "/*Set style for all the buttons in function widget*/\n"
@@ -94,6 +98,34 @@ class Ui_Form(object):
         self.gridLayout.setObjectName("gridLayout")
         spacerItem = QtWidgets.QSpacerItem(58, 688, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.gridLayout.addItem(spacerItem, 0, 0, 2, 1)
+        self.titleWidget = QtWidgets.QWidget(Form)
+        self.titleWidget.setMinimumSize(QtCore.QSize(700, 500))
+        self.titleWidget.setMaximumSize(QtCore.QSize(700, 500))
+        self.titleWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.titleWidget.setStyleSheet("")
+        self.titleWidget.setObjectName("titleWidget")
+        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.titleWidget)
+        self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName("verticalLayout_2")
+        spacerItem1 = QtWidgets.QSpacerItem(20, 213, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem1)
+        self.verticalLayout = QtWidgets.QVBoxLayout()
+        self.verticalLayout.setContentsMargins(-1, -1, -1, 25)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName("verticalLayout")
+        self.titleLabel1 = QtWidgets.QLabel(self.titleWidget)
+        self.titleLabel1.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.titleLabel1.setAlignment(QtCore.Qt.AlignCenter)
+        self.titleLabel1.setObjectName("titleLabel1")
+        self.verticalLayout.addWidget(self.titleLabel1)
+        self.verticalLayout_2.addLayout(self.verticalLayout)
+        spacerItem2 = QtWidgets.QSpacerItem(20, 213, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem2)
+        self.gridLayout.addWidget(self.titleWidget, 0, 1, 2, 1)
+        spacerItem3 = QtWidgets.QSpacerItem(58, 688, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout.addItem(spacerItem3, 0, 3, 2, 1)
         self.funcWidget = QtWidgets.QStackedWidget(Form)
         self.funcWidget.setMinimumSize(QtCore.QSize(500, 500))
         self.funcWidget.setMaximumSize(QtCore.QSize(500, 500))
@@ -102,16 +134,17 @@ class Ui_Form(object):
         self.page.setObjectName("page")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.page)
         self.gridLayout_2.setObjectName("gridLayout_2")
-        spacerItem1 = QtWidgets.QSpacerItem(20, 95, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem1, 0, 1, 1, 1)
-        spacerItem2 = QtWidgets.QSpacerItem(67, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem2, 1, 0, 1, 1)
+        spacerItem4 = QtWidgets.QSpacerItem(20, 95, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem4, 0, 1, 1, 1)
+        spacerItem5 = QtWidgets.QSpacerItem(67, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem5, 1, 0, 1, 1)
         self.verticalLayout_6 = QtWidgets.QVBoxLayout()
         self.verticalLayout_6.setSpacing(30)
         self.verticalLayout_6.setObjectName("verticalLayout_6")
         self.RegisLabel = QtWidgets.QLabel(self.page)
         self.RegisLabel.setStyleSheet("#RegisLabel{\n"
-"    color: #334548\n"
+"    color: #1A3551;\n"
+"    font-size: 30px;\n"
 "}")
         self.RegisLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.RegisLabel.setObjectName("RegisLabel")
@@ -120,7 +153,9 @@ class Ui_Form(object):
         self.verticalLayout_7.setObjectName("verticalLayout_7")
         self.NameLabel2 = QtWidgets.QLabel(self.page)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Stencil")
+        font.setPointSize(-1)
+        font.setBold(True)
         self.NameLabel2.setFont(font)
         self.NameLabel2.setObjectName("NameLabel2")
         self.verticalLayout_7.addWidget(self.NameLabel2)
@@ -133,7 +168,9 @@ class Ui_Form(object):
         self.verticalLayout_8.setObjectName("verticalLayout_8")
         self.IPLabel2 = QtWidgets.QLabel(self.page)
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Stencil")
+        font.setPointSize(-1)
+        font.setBold(True)
         self.IPLabel2.setFont(font)
         self.IPLabel2.setObjectName("IPLabel2")
         self.verticalLayout_8.addWidget(self.IPLabel2)
@@ -162,26 +199,27 @@ class Ui_Form(object):
         self.horizontalLayout_2.addWidget(self.AddButton)
         self.verticalLayout_6.addLayout(self.horizontalLayout_2)
         self.gridLayout_2.addLayout(self.verticalLayout_6, 1, 1, 1, 1)
-        spacerItem3 = QtWidgets.QSpacerItem(66, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_2.addItem(spacerItem3, 1, 2, 1, 1)
-        spacerItem4 = QtWidgets.QSpacerItem(20, 95, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_2.addItem(spacerItem4, 2, 1, 1, 1)
+        spacerItem6 = QtWidgets.QSpacerItem(66, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_2.addItem(spacerItem6, 1, 2, 1, 1)
+        spacerItem7 = QtWidgets.QSpacerItem(20, 95, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_2.addItem(spacerItem7, 2, 1, 1, 1)
         self.funcWidget.addWidget(self.page)
         self.page_2 = QtWidgets.QWidget()
         self.page_2.setObjectName("page_2")
         self.gridLayout_3 = QtWidgets.QGridLayout(self.page_2)
         self.gridLayout_3.setObjectName("gridLayout_3")
-        spacerItem5 = QtWidgets.QSpacerItem(20, 57, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem5, 0, 1, 1, 1)
-        spacerItem6 = QtWidgets.QSpacerItem(72, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem6, 1, 0, 1, 1)
+        spacerItem8 = QtWidgets.QSpacerItem(20, 57, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_3.addItem(spacerItem8, 0, 1, 1, 1)
+        spacerItem9 = QtWidgets.QSpacerItem(72, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem9, 1, 0, 1, 1)
         self.verticalLayout_5 = QtWidgets.QVBoxLayout()
         self.verticalLayout_5.setSpacing(30)
         self.verticalLayout_5.setObjectName("verticalLayout_5")
         self.LoginLabel = QtWidgets.QLabel(self.page_2)
         self.LoginLabel.setMinimumSize(QtCore.QSize(319, 60))
         self.LoginLabel.setStyleSheet("#LoginLabel{\n"
-"    color: #334548\n"
+"    font-size: 30px;\n"
+"    color: #1A3551\n"
 "}")
         self.LoginLabel.setAlignment(QtCore.Qt.AlignCenter)
         self.LoginLabel.setObjectName("LoginLabel")
@@ -191,7 +229,9 @@ class Ui_Form(object):
         self.NameLabel1 = QtWidgets.QLabel(self.page_2)
         self.NameLabel1.setMinimumSize(QtCore.QSize(317, 30))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Stencil")
+        font.setPointSize(-1)
+        font.setBold(True)
         self.NameLabel1.setFont(font)
         self.NameLabel1.setObjectName("NameLabel1")
         self.verticalLayout_3.addWidget(self.NameLabel1)
@@ -206,7 +246,9 @@ class Ui_Form(object):
         self.IPLabel1 = QtWidgets.QLabel(self.page_2)
         self.IPLabel1.setMinimumSize(QtCore.QSize(317, 29))
         font = QtGui.QFont()
-        font.setPointSize(10)
+        font.setFamily("Stencil")
+        font.setPointSize(-1)
+        font.setBold(True)
         self.IPLabel1.setFont(font)
         self.IPLabel1.setObjectName("IPLabel1")
         self.verticalLayout_4.addWidget(self.IPLabel1)
@@ -242,58 +284,30 @@ class Ui_Form(object):
         self.horizontalLayout.addWidget(self.LoginButton)
         self.verticalLayout_5.addLayout(self.horizontalLayout)
         self.gridLayout_3.addLayout(self.verticalLayout_5, 1, 1, 1, 1)
-        spacerItem7 = QtWidgets.QSpacerItem(71, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout_3.addItem(spacerItem7, 1, 2, 1, 1)
-        spacerItem8 = QtWidgets.QSpacerItem(20, 56, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout_3.addItem(spacerItem8, 2, 1, 1, 1)
+        spacerItem10 = QtWidgets.QSpacerItem(71, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.gridLayout_3.addItem(spacerItem10, 1, 2, 1, 1)
+        spacerItem11 = QtWidgets.QSpacerItem(20, 56, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.gridLayout_3.addItem(spacerItem11, 2, 1, 1, 1)
         self.funcWidget.addWidget(self.page_2)
         self.gridLayout.addWidget(self.funcWidget, 0, 2, 2, 1)
-        self.titleWidget = QtWidgets.QWidget(Form)
-        self.titleWidget.setMinimumSize(QtCore.QSize(700, 500))
-        self.titleWidget.setMaximumSize(QtCore.QSize(700, 500))
-        self.titleWidget.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.titleWidget.setStyleSheet("")
-        self.titleWidget.setObjectName("titleWidget")
-        self.verticalLayout_2 = QtWidgets.QVBoxLayout(self.titleWidget)
-        self.verticalLayout_2.setSizeConstraint(QtWidgets.QLayout.SetNoConstraint)
-        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.verticalLayout_2.setSpacing(0)
-        self.verticalLayout_2.setObjectName("verticalLayout_2")
-        spacerItem9 = QtWidgets.QSpacerItem(20, 213, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem9)
-        self.verticalLayout = QtWidgets.QVBoxLayout()
-        self.verticalLayout.setContentsMargins(-1, -1, -1, 25)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName("verticalLayout")
-        self.titleLabel1 = QtWidgets.QLabel(self.titleWidget)
-        self.titleLabel1.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.titleLabel1.setAlignment(QtCore.Qt.AlignCenter)
-        self.titleLabel1.setObjectName("titleLabel1")
-        self.verticalLayout.addWidget(self.titleLabel1)
-        self.verticalLayout_2.addLayout(self.verticalLayout)
-        spacerItem10 = QtWidgets.QSpacerItem(20, 213, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem10)
-        self.gridLayout.addWidget(self.titleWidget, 0, 1, 2, 1)
-        spacerItem11 = QtWidgets.QSpacerItem(58, 688, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.gridLayout.addItem(spacerItem11, 0, 3, 2, 1)
 
         self.retranslateUi(Form)
-        self.funcWidget.setCurrentIndex(0)
+        self.funcWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
-        self.RegisLabel.setText(_translate("Form", "Đăng kí"))
-        self.NameLabel2.setText(_translate("Form", "Tên thiết bị:"))
-        self.IPLabel2.setText(_translate("Form", "Địa chỉ IP:"))
-        self.BackButton.setText(_translate("Form", "Trở về"))
-        self.AddButton.setText(_translate("Form", "Thêm thiết bị"))
-        self.LoginLabel.setText(_translate("Form", "Đăng nhập"))
-        self.NameLabel1.setText(_translate("Form", "Tên thiết bị:"))
-        self.IPLabel1.setText(_translate("Form", "Địa chỉ IP:"))
-        self.ExitButton.setText(_translate("Form", "Thoát"))
-        self.CreateButton.setText(_translate("Form", "Đăng kí"))
-        self.LoginButton.setText(_translate("Form", "Đăng nhặp"))
-        self.titleLabel1.setText(_translate("Form", "ĐĂNG NHẬP THIẾT BỊ"))
+        self.titleLabel1.setText(_translate("Form", "RASPBERRY APPLICATION"))
+        self.RegisLabel.setText(_translate("Form", "Add Device"))
+        self.NameLabel2.setText(_translate("Form", "Name device:"))
+        self.IPLabel2.setText(_translate("Form", "Address IP:"))
+        self.BackButton.setText(_translate("Form", "Back"))
+        self.AddButton.setText(_translate("Form", "Add device"))
+        self.LoginLabel.setText(_translate("Form", "Connect"))
+        self.NameLabel1.setText(_translate("Form", "Address IP"))
+        self.IPLabel1.setText(_translate("Form", "Port"))
+        self.ExitButton.setText(_translate("Form", "Exit"))
+        self.CreateButton.setText(_translate("Form", "Add"))
+        self.LoginButton.setText(_translate("Form", "Connect"))
 from static import resource_rc

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>739</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Form{
+	background-color: #A0B9D0;
+}
+#scrollArea{
+	border:none;
+}
+#scrollAreaWidgetContents{
+	background-color: #A0B9D0;
+}
+
+QScrollArea{
+	background-color: #A0B9D0;
+	border:none;
+	
+}
+
+QScrollBar:vertical {
+    border:none;
+    background: #A0B9D0;
+    width: 8px;
+	border-radius:5px;
+	padding-top:5px;
+	padding-left:2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #3E8989;
+    min-height: 20px;
+	border-radius:3px;
+	padding-left: 15px
+}
+
+QScrollBar::add-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical {
+	background: #A0B9D0;
+}
+
+QScrollBar::sub-page:vertical {
+	background: #A0B9D0;
+}
+
+QPushButton{
+	width:100px;
+	height:33px;
+	text-align: center;
+	padding: 3px;
+	font-weight:bold;
+	border-radius:10px;
+	color: #3d5673;
+	border: 1px;
+}
+QPushButton:hover{
+	background-color:#6991B5;
+}
+QPushButton:pressed{
+	padding-left:5px;
+	background-color:#78A0BC;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>15</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>15</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>15</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>719</width>
+        <height>563</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel{
+	color:#3B3561;
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_10">
+       <property name="spacing">
+        <number>30</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>50</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="label_2">
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>15</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Speed Test</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>673</width>
+           <height>350</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: none
+</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <property name="horizontalSpacing">
+           <number>15</number>
+          </property>
+          <property name="verticalSpacing">
+           <number>10</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QWidget" name="widget" native="true">
+            <property name="styleSheet">
+             <string notr="true">#widget{
+		border: none;
+}</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="leftMargin">
+              <number>10</number>
+             </property>
+             <property name="topMargin">
+              <number>10</number>
+             </property>
+             <property name="rightMargin">
+              <number>10</number>
+             </property>
+             <property name="bottomMargin">
+              <number>10</number>
+             </property>
+             <property name="spacing">
+              <number>15</number>
+             </property>
+             <item row="0" column="1">
+              <widget class="QPushButton" name="check_button">
+               <property name="text">
+                <string>Check</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="list_servers_button">
+               <property name="text">
+                <string>List Servers</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QTextBrowser" name="result_text_browser">
+            <property name="font">
+             <font>
+              <family>Times New Roman</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTextBrowser{
+	border-radius: 15px;
+	border: 1px solid #3d5673;
+	background-color: #A0B9D0;
+	padding:20px;
+	gridline-color: #3d5673;
+	color:#3B3561;
+}
+
+QScrollArea{
+	border:none;
+}
+
+QScrollBar:vertical {
+    border:none;
+    background: #A0B9D0;
+    width: 8px;
+	border-radius:5px;
+	padding-top:5px;
+	padding-left:2px;
+}
+
+QScrollBar::handle:vertical {
+    background: #3E8989;
+    min-height: 20px;
+	border-radius:3px;
+	padding-left: 5px
+}
+
+QScrollBar::add-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border:none;
+    background: #A0B9D0;
+    height: 0px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:vertical {
+	background: #A0B9D0;
+}
+
+QScrollBar::sub-page:vertical {
+	background: #A0B9D0;
+}
+
+/*Horizontal scrollbar*/
+QScrollBar:horizontal {
+    border: none;
+    background: #A0B9D0;
+    height: 8px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #3E8989;
+    min-width: 20px;
+    border-radius: 3px;
+    padding-left: 5px;
+}
+
+QScrollBar::add-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: #A0B9D0;
+    width: 0px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-page:horizontal {
+    background: #A0B9D0;
+}
+
+QScrollBar::sub-page:horizontal {
+    background: #A0B9D0;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

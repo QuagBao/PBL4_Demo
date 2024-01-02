@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1217</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#centralwidget{
+	border-radius: 10px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">#centralwidget{
+	background-color: #4B7C9B;
+}
+#centralwidget QPushButton{
+	width:100px;
+	height:33px;
+	text-align: center;
+	padding: 3px;
+	font-weight:bold;
+	border-radius:10px;
+	color: #11253E;
+	border: 1px;
+}
+#centralwidget QPushButton:hover{
+	background-color:#6991B5;
+}
+#centralwidget QPushButton:pressed{
+	padding-left:5px;
+	background-color:#78A0BC;
+}
+
+#footer_widget{
+	border-radius:20px;
+}
+
+#splitter{
+	border-radius:10px;
+}</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3" rowstretch="0,0">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0" alignment="Qt::AlignBottom">
+     <widget class="QWidget" name="footer_widget" native="true">
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#QPushButton{
+	width:100px;
+	height:33px;
+	text-align: center;
+	padding: 5px 20px 5px 20px;
+	padding: 10px;
+
+	font-weight:bold;
+	border-radius:20px;
+	color: #11253E;
+	border: 1px;
+}
+#QPushButton:hover{
+	background-color:#6991B5;
+}
+#QPushButton:checked{
+	background-color:#78A0BC;
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>10</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item alignment="Qt::AlignLeft">
+        <widget class="QFrame" name="left_footer_frame">
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>15</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="shutdown_btn">
+            <property name="font">
+             <font>
+              <family>Constantia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#QPushButton{
+	background-color: #8DAEC6;
+	font-weight:bold;
+	border-radius: 20px
+}
+#QPushButton:hover{
+	background-color:#6991B5;
+}
+#QPushButton:pressed{
+	background-color:#78A0BC;
+}</string>
+            </property>
+            <property name="text">
+             <string> Shutdown</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../static/res.qrc">
+              <normaloff>:/newPrefix/icons/icons/feather/power.svg</normaloff>:/newPrefix/icons/icons/feather/power.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="reboot_btn">
+            <property name="font">
+             <font>
+              <family>Constantia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+              <hintingpreference>PreferDefaultHinting</hintingpreference>
+             </font>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="focusPolicy">
+             <enum>Qt::NoFocus</enum>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="toolTipDuration">
+             <number>-1</number>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string> Reboot</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../static/res.qrc">
+              <normaloff>:/newPrefix/icons/icons/feather/refresh-ccw.svg</normaloff>:/newPrefix/icons/icons/feather/refresh-ccw.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignRight">
+        <widget class="QFrame" name="right_footer_frame">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="disconnect_btn">
+            <property name="minimumSize">
+             <size>
+              <width>141</width>
+              <height>26</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <family>Constantia</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">#QPushButton{
+	background-color: #8DAEC6;
+	font-weight:bold;
+	border-radius: 20px;
+}
+#QPushButton:hover{
+	background-color:#6991B5;
+}
+#QPushButton:checked{
+	background-color:#78A0BC;
+}</string>
+            </property>
+            <property name="text">
+             <string> Disconnect</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../static/res.qrc">
+              <normaloff>:/newPrefix/icons/icons/feather/cast.svg</normaloff>:/newPrefix/icons/icons/feather/cast.svg</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>24</width>
+              <height>24</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Constantia</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">#splitter{
+	background-color: #C9D8E3;
+}
+
+#menu_widget{
+	border-top-left-radius: 10px;
+}
+
+#main_widget{
+	border-top-right-radius: 10px;
+}</string>
+      </property>
+      <property name="lineWidth">
+       <number>0</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="handleWidth">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="menu_widget" native="true">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #4B7C9B;
+color: #0E243D;
+
+</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <property name="leftMargin">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>10</number>
+        </property>
+        <property name="bottomMargin">
+         <number>20</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="1">
+         <widget class="QToolBox" name="toolBox">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Constantia</family>
+            <pointsize>11</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#toolBox{
+	color:#8DAEC6;
+	border-radius: 5%;
+}
+#toolBox::tab{
+	padding-left:5px;
+	text-align:left;
+	border-radius:5px;
+}
+#toolBox::tab::hover{
+	background-color:#82A7C2;
+}
+#toolBox::tab::selected{
+	background-color:#8DAEC6;
+	font-weight:bold;
+}
+#toolBox QPushButton{
+	padding: 5px 0px 5px 20px;
+	text-align:left;
+	border-radius:5px;
+	color: #11253E;
+	border: 1px;
+}
+#toolBox QPushButton:hover{
+	background-color:#6991B5;
+}
+#toolBox QPushButton:checked{
+	background-color:#78A0BC;
+}
+</string>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="rasp_info_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>236</width>
+             <height>448</height>
+            </rect>
+           </property>
+           <attribute name="icon">
+            <iconset resource="../static/res.qrc">
+             <normaloff>:/newPrefix/icons/icons/feather/hard-drive.svg</normaloff>:/newPrefix/icons/icons/feather/hard-drive.svg</iconset>
+           </attribute>
+           <attribute name="label">
+            <string> Rasp Information</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="cpu_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> CPU</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/cpu.svg</normaloff>:/newPrefix/icons/icons/feather/cpu.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sy_info_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> System Information</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/monitor.svg</normaloff>:/newPrefix/icons/icons/feather/monitor.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="os_info_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> OS Information</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/inbox.svg</normaloff>:/newPrefix/icons/icons/feather/inbox.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>414</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="activities_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>236</width>
+             <height>448</height>
+            </rect>
+           </property>
+           <attribute name="icon">
+            <iconset resource="../static/res.qrc">
+             <normaloff>:/newPrefix/icons/icons/feather/activity.svg</normaloff>:/newPrefix/icons/icons/feather/activity.svg</iconset>
+           </attribute>
+           <attribute name="label">
+            <string> Activities</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="process_list_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string> Process List</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/cil-list.png</normaloff>:/newPrefix/icons/icons/cil-list.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="terminal_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> Terminal</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/terminal.svg</normaloff>:/newPrefix/icons/icons/feather/terminal.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="sftp_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> SFTP</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/share-2.svg</normaloff>:/newPrefix/icons/icons/feather/share-2.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_2">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+               </font>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>378</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="options_page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>236</width>
+             <height>448</height>
+            </rect>
+           </property>
+           <attribute name="icon">
+            <iconset resource="../static/res.qrc">
+             <normaloff>:/newPrefix/icons/icons/cil-options-horizontal.png</normaloff>:/newPrefix/icons/icons/cil-options-horizontal.png</iconset>
+           </attribute>
+           <attribute name="label">
+            <string> Options</string>
+           </attribute>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>10</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="storage_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> Storage</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/disc.svg</normaloff>:/newPrefix/icons/icons/feather/disc.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="network_button">
+              <property name="font">
+               <font>
+                <family>Constantia</family>
+                <pointsize>10</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="text">
+               <string> Network</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../static/res.qrc">
+                <normaloff>:/newPrefix/icons/icons/feather/wifi.svg</normaloff>:/newPrefix/icons/icons/feather/wifi.svg</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>24</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="checkable">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>414</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="main_widget" native="true">
+       <property name="font">
+        <font>
+         <family>Constantia</family>
+         <pointsize>10</pointsize>
+         <kerning>true</kerning>
+        </font>
+       </property>
+       <property name="toolTipDuration">
+        <number>-1</number>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#menu_widget{
+	background-color: #A0B9D0;
+}
+#search_widget{
+	border-top-right-radius: 10px;
+}</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QWidget" name="search_widget" native="true">
+          <property name="font">
+           <font>
+            <family>Constantia</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">#search_widget{
+	background-color:#4B7C9B;
+}
+#search_widget QPushButton{
+	border-radius: 5px;
+	padding: 5px 20px 5px 20px;
+	text-align:center;
+}
+#search_widge QPushButton:pressed{
+	padding-left: 10px;
+}
+
+/*Set style for long and creat device button in function widget */
+</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="header_frame">
+             <property name="font">
+              <font>
+               <family>Constantia</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#header_frame{
+	background-color:none;
+}
+
+#header_frame QPushButton{
+	border-radius:5px;
+	color: #11253E;
+}
+#header_frame QPushButton:hover{
+	background-color:#6991B5;
+}
+#header_frame QPushButton:pressed{
+	background-color:#78A0BC;
+}</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="spacing">
+               <number>5</number>
+              </property>
+              <property name="leftMargin">
+               <number>15</number>
+              </property>
+              <property name="topMargin">
+               <number>8</number>
+              </property>
+              <property name="rightMargin">
+               <number>15</number>
+              </property>
+              <property name="bottomMargin">
+               <number>5</number>
+              </property>
+              <item>
+               <widget class="QPushButton" name="menu_button">
+                <property name="minimumSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>30</width>
+                  <height>30</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#QPushButton{
+	background-color: #8DAEC6;
+	font-weight:bold;
+	border-radius: 10%
+}
+#QPushButton:hover{
+	background-color:#6991B5;
+}
+#QPushButton:checked{
+	background-color:#78A0BC;
+}</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../static/res.qrc">
+                  <normaloff>:/newPrefix/icons/icons/feather/align-justify.svg</normaloff>
+                  <normalon>:/newPrefix/icons/icons/feather/align-left.svg</normalon>:/newPrefix/icons/icons/feather/align-justify.svg</iconset>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>24</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="checkable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>133</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QFrame" name="center_header_frame">
+                <property name="minimumSize">
+                 <size>
+                  <width>331</width>
+                  <height>44</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color:none;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout">
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label">
+                   <property name="font">
+                    <font>
+                     <family>Constantia</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="pixmap">
+                    <pixmap resource="../static/res.qrc">:/newPrefix/icons/icons/feather/airplay.svg</pixmap>
+                   </property>
+                  </widget>
+                 </item>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QLabel" name="label_2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Constantia</family>
+                     <pointsize>16</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>   RASBERRY PI APPLICATION</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_2">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>165</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QFrame" name="right_header_frame">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#right_header_frame{
+	background-color:none;
+}
+# QPushButton:hover{
+	background-color:#6991B5;
+}
+#QPushButton:checked{
+	background-color:#78A0BC;
+}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                 <property name="spacing">
+                  <number>10</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="minimize_window_btn">
+                   <property name="maximumSize">
+                    <size>
+                     <width>30</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Constantia</family>
+                     <pointsize>10</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../static/res.qrc">
+                     <normaloff>:/newPrefix/icons/icons/cil-minus.png</normaloff>:/newPrefix/icons/icons/cil-minus.png</iconset>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>24</width>
+                     <height>16</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="restore_window_btn">
+                   <property name="maximumSize">
+                    <size>
+                     <width>30</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Constantia</family>
+                     <pointsize>10</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../static/res.qrc">
+                     <normaloff>:/newPrefix/icons/icons/cil-window-restore.png</normaloff>:/newPrefix/icons/icons/cil-window-restore.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="close_window_btn">
+                   <property name="maximumSize">
+                    <size>
+                     <width>30</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Constantia</family>
+                     <pointsize>10</pointsize>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="icon">
+                    <iconset resource="../static/res.qrc">
+                     <normaloff>:/newPrefix/icons/icons/cil-x.png</normaloff>:/newPrefix/icons/icons/cil-x.png</iconset>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="main_body_frame">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <family>Constantia</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color:#A0B9D0</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_4">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QTabWidget" name="tabWidget">
+                <property name="font">
+                 <font>
+                  <family>Constantia</family>
+                  <pointsize>10</pointsize>
+                 </font>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="focusPolicy">
+                 <enum>Qt::NoFocus</enum>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">#tabWidget{
+	background-color: #A0B9D0;
+	border-radius: 5px;
+	border: 5px solid #A0B9D0;
+}
+
+QTabBar::close-button{
+	margin-left:3px;
+	image: url(:/Img/icons/x-mark-4-16.ico);
+}
+QTabBar::close-button:hover{
+	image: url(:/Img/icons/close_10263254.png);
+}
+QTabBar::tab{
+	background-color:  #C9D8E3;
+	min-width: 100px;
+	max-width: 175px;
+	height: 25px;
+	border-radius:3px;
+}
+
+
+
+
+</string>
+                </property>
+                <property name="currentIndex">
+                 <number>-1</number>
+                </property>
+                <property name="tabsClosable">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../static/res.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>menu_button</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>menu_widget</receiver>
+   <slot>setHidden(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>216</x>
+     <y>38</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>177</x>
+     <y>3</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
