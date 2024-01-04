@@ -38,6 +38,7 @@ class Terminal(QWidget):
         try:
             self.ssh.connect(hostname, port, username, password)
             self.shell = self.ssh.invoke_shell()
+            #tao 1 luong lang nghe de nhan du lieu tu shell SSH va hien thi giao dien
             self.listener_thread = SSHListenerThread(self.shell)
             self.listener_thread.signal.connect(self.appendToTerminal)
             self.listener_thread.start()
@@ -68,6 +69,7 @@ class Terminal(QWidget):
         self.ui.output_txt.insertPlainText(clean_message)
 
 # Trong class SSHListenerThread, thêm một biến để kiểm tra tình trạng
+        #luong nhan du lieu, no se phat tin hieu signal va gd se cap nhat
 class SSHListenerThread(QThread):
     signal = pyqtSignal(str)
 
@@ -75,7 +77,7 @@ class SSHListenerThread(QThread):
         QThread.__init__(self)
         self.shell = shell
         self._is_running = True  # Biến kiểm tra xem thread có đang chạy không
-
+    #kiem tra xem co du lieu moi tu shell  khong, neu co thi gui tin hieu cap nhat gd
     def run(self):
         while self._is_running:
             if self.shell.recv_ready():

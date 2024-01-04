@@ -64,8 +64,9 @@ class MyWindow_3(QMainWindow):
         self.ui.minimize_window_btn.clicked.connect(lambda: self.showMinimized())
         self.ui.restore_window_btn.clicked.connect(lambda: self.restore_or_maximize_window())
 
+        
         #connect signal and send request
-        if(self.cpu_button.clicked.connect(lambda: self.handle_request('get_memory_info'))) :
+        if(self.cpu_button.clicked.connect(lambda:  self.handle_request('get_memory_info'))) :
             if(self.cpu_button.clicked.connect(lambda: self.handle_request('get_temp'))) :
                 if(self.cpu_button.clicked.connect(lambda: self.handle_request('get_cpu_percent'))):
                     if(self.cpu_button.clicked.connect(lambda: self.handle_request('cpu_count'))):
@@ -73,10 +74,14 @@ class MyWindow_3(QMainWindow):
                             self.cpu_button.clicked.connect(self.show_selected_window)
 
         if(self.sy_info_button.clicked.connect(lambda: self.handle_request('get_system_info'))):
-            self.sy_info_button.clicked.connect(self.show_selected_window)
+            if(self.sy_info_button.clicked.connect(lambda: self.handle_request('get_time'))):
+                if(self.sy_info_button.clicked.connect(lambda: self.handle_request('get_date'))):
+                    self.sy_info_button.clicked.connect(self.show_selected_window)
         
         if(self.os_info_button.clicked.connect(lambda: self.handle_request('get_os_info'))):
-            self.os_info_button.clicked.connect(self.show_selected_window)
+            if(self.os_info_button.clicked.connect(lambda: self.handle_request('get_time'))):
+                if(self.os_info_button.clicked.connect(lambda: self.handle_request('get_date'))):
+                    self.os_info_button.clicked.connect(self.show_selected_window)
 
         if(self.storage_button.clicked.connect(lambda: self.handle_request('get_disk_usage'))):
             self.storage_button.clicked.connect(self.show_selected_window)
@@ -192,6 +197,10 @@ class MyWindow_3(QMainWindow):
             return self.handle_receive_data_7(response)
         if data == 'get_disk_usage':
             return self.handle_receive_data_8(response)
+        if data == 'get_date':
+            return self.handle_receive_data_9(response)
+        if data == 'get_time':
+            return self.handle_receive_data_10(response)
         
         client_socket.close()
 
@@ -248,4 +257,14 @@ class MyWindow_3(QMainWindow):
         information_string._instance = information_string()
         information_string._instance.update_storage (response)
         print(information_string._instance.get_storage())
+
+    def handle_receive_data_9(self, response):
+        information_string._instance = information_string()
+        information_string._instance.update_date (response)
+        print(information_string._instance.get_date())
+
+    def handle_receive_data_10(self, response):
+        information_string._instance = information_string()
+        information_string._instance.update_time (response)
+        print(information_string._instance.get_time())
 

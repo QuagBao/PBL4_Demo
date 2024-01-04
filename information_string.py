@@ -16,6 +16,8 @@ class information_string:
             cls._instance._get_cpu_main_core = None
             cls._instance._storage = None
             cls._instance._net_cnn = None
+            cls._instance._get_date = None
+            cls._instance._get_time = None
         return cls._instance
 
     @classmethod
@@ -57,6 +59,22 @@ class information_string:
     @classmethod
     def update_network_connections(cls, new_name):
         cls._instance._net_cnn = new_name
+
+    @classmethod
+    def update_date(cls, new_name):
+        cls._instance._get_date = new_name
+
+    @classmethod
+    def update_time(cls, new_name):
+        cls._instance._get_time = new_name
+
+    @classmethod
+    def get_time(cls):
+        return cls._instance._get_time
+
+    @classmethod
+    def get_date(cls):
+        return cls._instance._get_date
 
     @classmethod
     def get_memory_info(cls):

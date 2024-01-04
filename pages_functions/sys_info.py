@@ -14,6 +14,8 @@ class System_Information(QWidget):
     def handle_receive_data(self):
         information_string._instance = information_string()
         result = information_string._instance.get_system_info()
+        result_1 = information_string._instance.get_date()
+        result_2 = information_string._instance.get_time()
         
         if result is not None:
             #sử dụng hàm chung để lấy các giá trị tương ứng với từ khóa
@@ -27,7 +29,8 @@ class System_Information(QWidget):
             self.ui.txt_processor.setText(processor)
             self.ui.txt_architecture.setText(architecture)
             self.ui.txt_py_version.setText(python_version)
-
+            self.ui.txt_sysdate.setText(str(result_1))
+            self.ui.txt_systime.setText(str(result_2))
     def get_value_from_string(self, data, key):
         try:
             # Xử lý dấu ngoặc đơn trong giá trị 'architecture'

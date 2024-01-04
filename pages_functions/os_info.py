@@ -14,6 +14,9 @@ class OS_Info(QWidget):
     def handle_receive_data(self):
         information_string._instance = information_string()
         result = information_string._instance.get_os_info()
+        result_1 = information_string._instance.get_date()
+        result_2 = information_string._instance.get_time()
+        print(result_1,result_2)
         if result is not None:
             #sử dụng hàm chung để lấy các giá trị tương ứng với từ khóa
             system = self.get_value_from_string(result, 'system')
@@ -28,7 +31,8 @@ class OS_Info(QWidget):
             self.ui.txt_release.setText(release)
             self.ui.txt_version.setText(version)
             self.ui.txt_machine.setText(machine.upper())
-
+            self.ui.txt_sysdate.setText(str(result_1))
+            self.ui.txt_systime.setText(str(result_2))
     def get_value_from_string(self, data, key):
         try:
             # Chuyển đối tượng từ điển thành chuỗi

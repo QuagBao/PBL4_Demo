@@ -18,9 +18,6 @@ class SFTPUploader(QDialog):
         
         self.initUI()
 
-        # Load saved information, if available
-       
-    
    
 
     def initUI(self):
